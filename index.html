@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Counter</title>
+    <title>Sticky_Notes</title>
 </head>
 <body>
     <div class="container">
-        <div class="heading">
-            <h1>Counter</h1>
+        <div class="left-box">
+           <div class="left-item">
+            <textarea class="text" cols="80" rows="10" placeholder="//write a note here"></textarea>
+            <input type="color" class="changecolor">
+           </div>
+           <div>          
+             <button class="btn">Add note</button></div>
         </div>
-        <div class="counter">0</div>
-        <div class="btns">
-            <button class="increase btn">increase</button>
-            <button class="reset btn">reset</button>
-            <button class="decrease btn">decrease</button>
+        <div class="right-box">
+            <h1 class="heading">Your Notes</h1>
+            <div class="sub"></div>
+            <span class="sp">you have not added a note yet.</span>
         </div>
     </div>
     <script src="script.js"></script>

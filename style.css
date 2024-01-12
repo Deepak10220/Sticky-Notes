@@ -4,36 +4,82 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-body{
-    display: flex;
-    background: linear-gradient(95deg , rgba(32, 255, 16, 0.4) ,rgba(3, 142, 255, 0.858));
-    justify-content: center;
-}
 .container{
-    margin-top: 10rem;
-    background-color: #fff;
-    border-radius: 10px;
-    width: 30rem;
-    height: 15rem;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+.left-box{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;  
+    background-color: #D1DCE7;
+}
+.left-item{
+    display: flex;
+    justify-content: center;
     align-items: center;
+    gap: 2rem;
 }
-.counter{
-    font-size: 4rem;
-    margin-top: 1rem;
+.text{
+    height: 12rem;
+    padding: 10px;
+    font-size: 1.5rem;
+    width: 30rem;
+    box-shadow: rgb(128, 54, 54) 4px 4px 10px 0px ;
 }
-h1{
-    margin-top: 2rem;
-    
+.text:hover{
+    box-shadow: rgb(128, 54, 54) 6px 6px 12px 0px ;
 }
 .btn{
-    padding: 10px 20px;
-    border-radius: 25px;
-    background-color: #39fff5;
-    margin-top: 1rem;
-    font-size: 1.5rem;
+    position: relative;
+    right: 240px;
+    margin-top: 2rem;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+    background: linear-gradient(to right ,#F72267 , #FAA23F);
+    border: none;
+    font-weight: 700;
+    transition: all 2s ease-in-out;
 }
 .btn:hover{
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0,0.3);
+    background: linear-gradient(to right,#FAA23F ,#F72267 );
+    box-shadow: rgb(128, 54, 54) 4px 4px 10px 0px ;
+}
+.heading{
+    text-align: center;
+    margin-top: 1rem;
+}
+.sub{
+    margin: 1rem;
+    font-size: 1rem;
+}
+@media screen and (max-width:1200px) {
+    .left-item{
+        flex-direction: column;
+    }
+    .left-box{
+        flex-direction: column;
+    }
+    .btn{
+        justify-items: center;
+    }
+    .btn{
+        right: 0px;
+    }
+
+}
+@media screen and (max-width:1000px) {
+    .container{
+        grid-template-rows: repeat(2 , 1fr);
+        grid-template-columns: repeat(1 , 1fr);
+    }
+    .text{
+        margin: 1rem;
+    }
 }
